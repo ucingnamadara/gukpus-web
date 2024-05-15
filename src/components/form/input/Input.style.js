@@ -1,9 +1,11 @@
 import styled from "styled-components";
-import { GRAY } from "../../../styles/color/color";
 
 export const InputTag = styled.input`
-    padding: 8px;
-    font-size: ${(props) => props.fontSize || '16px'};
-    border-radius: 8px;
-    border: 1px solid ${GRAY};
+    padding: var(--padding-xs);
+    font-size: ${(props) => props.fontSize || 'var(--font-size-xs)'};
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-secondary);
+    width: 100%;
+    box-sizing: border-box;
+    
 `

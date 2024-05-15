@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { GRAY } from "../../../styles/color/color";
 
 export const Container = styled.div`
     display: flex;
@@ -10,9 +9,9 @@ export const Container = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid ${GRAY};
+    border: 0.5px solid var(--color-secondary);
     border-radius: 10px;
-    padding: 30px;
+    padding: var(--padding-xl);
 `
 
 export const LogoImg = styled.img`
@@ -26,8 +25,29 @@ export const LogoImg = styled.img`
     }
 `
 
+export const LoginDiv = styled.div`
+
+`
+
 export const LoginForm = styled.form`
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: var(--padding-xs);
+`
+
+export const LoginTitle = styled.p`
+    font-size: var(--font-size-title);
+    font-weight: bold;
+    margin: 0 0 0 0;
+`
+
+export const LoginTitleDescription = styled.p`
+    font-size: var(--font-size-xs);
+    font-weight: light;
+    margin: 0 0 var(--padding-2xl) 0;
+`
+
+export const FormTitle = styled.p`
+    font-size: var(--font-size-xs);
+    margin: 0 0 var(--padding-xs) 0;
 `
