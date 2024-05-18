@@ -11,12 +11,14 @@ export const Container = styled.div`
     transform: translate(-50%, -50%);
     border: 0.5px solid var(--color-secondary);
     border-radius: var(--border-radius-xl);
-    padding: var(--padding-3xl);
-    width: 80%;
+    padding: var(--padding-2xl);
+    width: 85%;
+    gap: var(--padding-2xl);
 
     @media (max-width: 768px) {
         flex-direction: column;
         justify-content: center;
+        gap: var(--padding-2xl);
     }
 `
 
@@ -32,10 +34,11 @@ export const LoginForm = styled.form`
     display: flex;
     flex-direction: column;
     gap: var(--padding-md);
+    margin-bottom: var(--padding-3xl);
 `
 
 export const LoginTitle = styled.p`
-    font-size: var(--font-size-title);
+    font-size: var(--font-size-title-xl);
     font-weight: bold;
     margin: 0 0 var(--padding-xs) 0;
 `
@@ -61,9 +64,12 @@ export const ImageDiv = styled.div`
 `
 
 export const Image = styled.img`
-    width: 90%;
+    width: 100%;
+    border-radius: var(--border-radius-xl);
+`
 
-    @media (max-width: 768px) {
-        width: 100%;
-    }
+export const Hyperlink = styled.a`
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-black);
 `
