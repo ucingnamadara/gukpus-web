@@ -1,17 +1,22 @@
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  p{
+  p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+
     font-size: var(--font-size-md);
     color: var(--color-primary);
   }
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -49,16 +54,19 @@ code {
   --font-size-title-xl: 2rem; /* 32px */
 
   /* Colors */
-  --color-primary: #000000;
+  --color-primary: #101415;
   --color-secondary: #8a8a8a;
   --color-success: #008000;
   --color-danger: #800000;
   --color-warning: #808000;
   --color-info: #008080;
-  --color-light: #C0C0C0;
+  --color-light: #c0c0c0;
   --color-dark: #404040;
   --color-white: #ffffff;
-  --color-black: #000000;
+  --color-black: #101415;
+  --color-grey: #e7e7e7;
+
+  --font-color-white: #ffffff;
 
   /* Padding */
   --padding-xs: 0.25rem; /* 4px */

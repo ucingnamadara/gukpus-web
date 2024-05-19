@@ -1,19 +1,18 @@
 // axios.config.js
-import axios from 'axios';
+import axios from "axios";
 
 // Create an Axios instance
-const axiosInstance = axios.create();
+const axiosInstance = axios;
 
 // Configure Axios instance
-axiosInstance.defaults.baseURL = process.env.API_BASE_URL || 'http://localhost:3000/api';
-axiosInstance.defaults.headers.common['Content-Type'] = 'application/json';
-axiosInstance.defaults.headers.common['Accept'] = 'application/json';
+axiosInstance.defaults.baseURL =
+  process.env.API_BASE_URL || "http://localhost:8080/api";
 
 // Add a request interceptor
 axiosInstance.interceptors.request.use(
   (config) => {
     // Add any additional headers or data transformations here
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -21,7 +20,7 @@ axiosInstance.interceptors.request.use(
   },
   (error) => {
     return Promise.reject(error);
-  }
+  },
 );
 
 // Add a response interceptor
@@ -33,7 +32,7 @@ axiosInstance.interceptors.response.use(
   (error) => {
     // Handle error responses here
     return Promise.reject(error);
-  }
+  },
 );
 
-module.exports = axiosInstance;
+export default axiosInstance;
